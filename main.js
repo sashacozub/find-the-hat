@@ -83,7 +83,7 @@ class Field {
         if (this.isOffBoard()) {
             return console.log('\n Oh no! You have jumped off the board! Try again! \n');
         } else if (this.isHole()) {
-            return console.log('\n Opps! You fell in a hole! Better luck next time! \n');
+            return console.log('\n Oops! You fell in a hole! Better luck next time! \n');
         } else if (this.isHat()) {
             return console.log('\n Congratulations! You have found your hat! \n');
         }
@@ -159,20 +159,13 @@ class Field {
 }
 
 
-const playGame = () => {
-    console.clear();
-    // Get the board size from the player
-    boardSize = prompt('What board size would you like? (Recommended: minimum 5) ')
-    const myField = new Field(boardSize, boardSize);
-    // Get the percentage of holes on the board
-    percentage = prompt('What percentage of the board should be filled with holes? (Recommended: 10-20) ')
-    myField.generateObjects(percentage)
-    // Start the game
-    myField.play();
-}
-
-
-playGame();
-
+// Get the board size from the player
+boardSize = prompt('What board size would you like? (Recommended: minimum 5) ')
+const newField = new Field(boardSize, boardSize);
+// Get the percentage of holes on the board
+percentage = prompt('What percentage of the board should be filled with holes? (Recommended: 10-20) ')
+newField.generateObjects(percentage)
+// Start the game
+newField.play();
 
 
