@@ -3,8 +3,8 @@
 
 ## Project details ##
 This project was made as part of portfolio project at [Codecademy.com](https://www.codecademy.com/).
-It contained a series of open-ended requirements which describe the project.
-This is my approach and code implementation of the given requirements.
+It contained a series of open-ended requirements which described the project.
+This is my approach and code implementation of the game.
 
 
 ---
