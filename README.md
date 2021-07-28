@@ -1,5 +1,5 @@
 # Find your hat #
-![Project preview](https://i.imgur.com/3urkap0.png)
+![Project preview](https://i.imgur.com/5bxlngF.png)
 
 ## Project details ##
 This project was made as part of portfolio project at [Codecademy.com](https://www.codecademy.com/)
@@ -15,7 +15,11 @@ My goal was to write the code for generating a working random game board as well
 
 ---
 ## How to use ##
-*To be updated...*
+1. Download [Node.js](https://nodejs.org/en/) (LTS version recommended).
+2. Install "prompt-sync" module by typing `npm i prompt-sync` in your terminal.
+3. Make sure you are located inside the root directory with "main.js" file.
+4. Run `node main` in your terminal to start the game.
+5. Follow set up rules and start the game!
 
 
 ---

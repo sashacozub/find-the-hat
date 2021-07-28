@@ -6,14 +6,25 @@ const hat = '^';
 const hole = 'O';
 const fieldCharacter = '░';
 const pathCharacter = '*';
+const gameRules = `
+Game Rules: \n 
+1. You need to stay inside the field. \n 
+2. Avoid the holes "O". \n 
+3. Find your hat "^"! \n 
+4. Choose your path wisely, as you can only enter one cell once.
+`;
+
+// This will be set by the player before the start of the game
+let boardSize;
+let percentage;
 
 
 // Make game constructor which creates the field and all the game logic
 class Field {
     constructor(height, width) {
         this.field = Field.generateField(height, width);
-        this.currentX;
-        this.currentY;
+        this.currentX = undefined;
+        this.currentY = undefined;
         this.nextMove = undefined; // This will hold player's answer on next move
     }
 
@@ -70,16 +81,16 @@ class Field {
     updateField() {
         // Check if user went over the provided field
         if (this.isOffBoard()) {
-            return console.log('Oh no! You have jumped off the board! Try again!');
+            return console.log('\n Oh no! You have jumped off the board! Try again! \n');
         } else if (this.isHole()) {
-            return console.log('Opps! You fell in a hole! Better luck next time!');
+            return console.log('\n Opps! You fell in a hole! Better luck next time! \n');
         } else if (this.isHat()) {
-            return console.log('Congratulations! You have found your hat!');
+            return console.log('\n Congratulations! You have found your hat! \n');
         }
         // If none of the above then update the display with the new player position
         this.field[this.currentY][this.currentX] = pathCharacter;
         this.play();
-        }
+    }    
   
     // Check if player went over the board
     isOffBoard() {
@@ -87,7 +98,7 @@ class Field {
         this.currentY < 0 || 
         this.currentX < 0 || 
         this.currentY > this.field.length - 1 || 
-        this.currentX > this.field[this.currentY].length - 1
+        this.currentX > this.field[0].length - 1
         );
     }
     
@@ -124,6 +135,9 @@ class Field {
 
     // This makes sure you can not move to a previously visited place
     backtrackCheck(dirY, dirX) {
+        if (dirY < 0 || dirX < 0 || dirY > this.field.length - 1 || dirX > this.field[0].length - 1
+        ) { return console.log('\n Oh no! You have jumped off the board! Try again! \n'); }
+
         if (this.field[dirY][dirX] !== pathCharacter) {
             this.currentX = dirX;
             this.currentY = dirY;
@@ -136,16 +150,29 @@ class Field {
     // Display the game field, get user's choice and start checking if it's a win or a lose.
     play() {
         console.clear();
+        console.log(gameRules);
         this.field.forEach(cell => console.log(cell.join('')));
-        this.nextMove = prompt('Where should we move? (R, L, U, D): ');
+        console.log('\n Choose where would you like to move! (Up, Down, Left, Right)')
+        this.nextMove = prompt('U / D / L / R: ');
         this.playerMove(this.nextMove);
     }
 }
 
-// Create new game
-const myField = new Field(10, 12);
-// Generate game objects
-myField.generateObjects(20);
-// Start the game
-myField.play();
+
+const playGame = () => {
+    console.clear();
+    // Get the board size from the player
+    boardSize = prompt('What board size would you like? (Recommended: minimum 5) ')
+    const myField = new Field(boardSize, boardSize);
+    // Get the percentage of holes on the board
+    percentage = prompt('What percentage of the board should be filled with holes? (Recommended: 10-20) ')
+    myField.generateObjects(percentage)
+    // Start the game
+    myField.play();
+}
+
+
+playGame();
+
+
 
