@@ -2,7 +2,7 @@
 ![Project preview](https://i.imgur.com/3urkap0.png)
 
 ## Project details ##
-This project was made as part of portfolio project at Codecademy.com
+This project was made as part of portfolio project at [Codecademy.com](https://www.codecademy.com/)
 It contained a series of open-ended requirements which describe the project.
 This is my approach and code implementation of the given requirements.
 
@@ -13,7 +13,9 @@ My goal was to write the code for generating a working random game board as well
 
 
 ## How to use ##
-**To be updated**
+*To be updated*
 
 ## Technologies ##
-This project was made with JavaScript ES6
+The following technologies were used:
+ - JavaScript ES6
+ - Node.js
