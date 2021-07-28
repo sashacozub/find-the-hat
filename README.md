@@ -9,7 +9,7 @@ This is my approach and code implementation of the game.
 
 ---
 ## Project's aim ##
-This project was aimed to build up knowledge and practice in JavaScript coding, and problem solving.
+This project was aimed to build up knowledge and practice in JavaScript coding and problem solving.
 My goal was to write the code for generating a working random game board as well as making sure that all the gameplay scenarios are handled correctly.
 
 
