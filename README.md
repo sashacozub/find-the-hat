@@ -2,7 +2,7 @@
 ![Project preview](https://i.imgur.com/5bxlngF.png)
 
 ## Project details ##
-This project was made as part of portfolio project at [Codecademy.com](https://www.codecademy.com/)
+This project was made as part of portfolio project at [Codecademy.com](https://www.codecademy.com/).
 It contained a series of open-ended requirements which describe the project.
 This is my approach and code implementation of the given requirements.
 
