@@ -1,4 +1,4 @@
-# Find your hat #
+# Find your hat # 🎓
 ![Project preview](https://i.imgur.com/5bxlngF.png)
 
 ## Project details ##
