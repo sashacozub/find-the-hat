@@ -1,24 +1,7 @@
-const readline = require('readline');
-readline.emitKeypressEvents(process.stdin);
-process.stdin.setRawMode(true);
-
-// process.stdin.on('keypress', (str, key) => {
-//   if (key.ctrl && key.name === 'c') {
-//     process.exit();
-//   } else {
-//     console.log('You pressed the ' + str + ' key');
-//     console.log('key: ' + key);
-//   }
-// });
-
 // Import prompt module to be able to get user's input
 const prompt = require('prompt-sync')({ sigint: true });
 
 // Create game objects
-// const hat = '^';
-// const hole = 'O';
-// const fieldCharacter = '░';
-// const pathCharacter = '*';
 const hat = '🎓';
 const hole = '⬛';
 const fieldCharacter = '🟫';
@@ -153,24 +136,6 @@ class Field {
         this.play();
         break;
     }
-
-    // switch (location) {
-    //   case 'right':
-    //     this.backtrackCheck(this.currentY, this.currentX + 1);
-    //     break;
-    //   case 'left':
-    //     this.backtrackCheck(this.currentY, this.currentX - 1);
-    //     break;
-    //   case 'up':
-    //     this.backtrackCheck(this.currentY - 1, this.currentX);
-    //     break;
-    //   case 'down':
-    //     this.backtrackCheck(this.currentY + 1, this.currentX);
-    //     break;
-    //   default:
-    //     this.play();
-    //     break;
-    // }
   }
 
   // This draws previously visited tiles
@@ -204,15 +169,6 @@ class Field {
     console.log(
       '\n Choose where would you like to move! (Up, Down, Left, Right)'
     );
-
-    // process.stdin.on('keypress', (str, key) => {
-    //   if (key.ctrl && key.name === 'c') {
-    //     process.exit();
-    //   } else {
-    //     this.playerMove(key.name);
-    //     this.nextMove = key.name;
-    //   }
-    // });
 
     this.nextMove = prompt('U / D / L / R: ');
     this.playerMove(this.nextMove);
