@@ -1,6 +1,6 @@
 # Find your hat 🎓
 
-<img src='https://i.imgur.com/UUKgSLP.png' width='600px'>
+<img src='https://i.imgur.com/BxbdL7i.png' width='600px'>
 
 ## Project details
 
