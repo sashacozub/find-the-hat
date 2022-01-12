@@ -12,7 +12,6 @@ Game Rules: \n
 1. You (🦖) need to stay inside the field. \n 
 2. Avoid the holes "⬛". \n 
 3. Find your hat "🎓"! \n 
-4. Choose your path wisely, as you can only enter one cell once.
 `;
 
 // This will be set by the player before the start of the game
