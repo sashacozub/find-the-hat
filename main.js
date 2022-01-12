@@ -5,11 +5,11 @@ const prompt = require('prompt-sync')({ sigint: true });
 const hat = '🎓';
 const hole = '⬛';
 const fieldCharacter = '🟫';
-const pathCharacter = '🕺🏻';
+const pathCharacter = '🦖';
 const previouslyVisitedCharacter = '👣';
 const gameRules = `
 Game Rules: \n 
-1. You (🕺🏻) need to stay inside the field. \n 
+1. You (🦖) need to stay inside the field. \n 
 2. Avoid the holes "⬛". \n 
 3. Find your hat "🎓"! \n 
 4. Choose your path wisely, as you can only enter one cell once.
